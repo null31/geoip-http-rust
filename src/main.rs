@@ -46,7 +46,7 @@ async fn main() {
             return reply;
         });
 
-    warp::serve(geoip_route).run(([127, 0, 0, 1], 7881)).await;
+    warp::serve(geoip_route).run(([0, 0, 0, 0], 7881)).await;
 }
 
 fn ip_to_geoip(ips: Vec<String>) -> Vec<GeoIpResponse> {
